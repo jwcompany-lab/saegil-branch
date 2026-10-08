@@ -22,6 +22,9 @@
         linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-500 selection:text-white">
@@ -33,10 +36,10 @@
         <span class="text-[11px] bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold px-2.5 py-0.5 rounded-full">충청 메가네트워크</span>
         <span class="font-extrabold text-base sm:text-lg text-white">글로벌금융판매 <span class="text-blue-400">새길지사</span></span>
       </div>
-      <!-- 변경된 카카오톡 상담 신청 버튼 -->
-      <a href="https://open.kakao.com/o/gKger8Qi" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] font-black px-4 sm:px-5 py-2.5 rounded-xl transition shadow-lg shadow-yellow-500/20 flex items-center gap-1.5 transform hover:-translate-y-0.5">
-        <i class="fa-solid fa-comment text-sm"></i>
-        <span>카카오톡 상담 신청</span>
+      <!-- 카카오톡 상담하기 버튼 -->
+      <a href="https://open.kakao.com/o/gKger8Qi" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm bg-[#FEE500] hover:bg-[#fada0a] text-[#191919] font-black px-4 sm:px-5 py-2.5 rounded-xl transition shadow-lg shadow-yellow-500/20 flex items-center gap-1.5">
+        <i class="fa-solid fa-comment text-xs"></i>
+        <span>카카오톡 상담하기</span>
       </a>
     </div>
   </header>
@@ -146,73 +149,97 @@
             <!-- 4대 인프라 카드 스택 -->
             <div class="flex-1 flex flex-col justify-between gap-2.5 my-3">
               
-              <!-- 카드 1 -->
+              <!-- 카드 1: 교육 시스템 -->
               <div class="bg-slate-950/80 p-3 sm:p-3.5 rounded-xl border border-slate-800/90 hover:border-blue-500/50 transition">
-                <div class="flex items-start gap-3">
-                  <div class="w-9 h-9 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center text-base border border-blue-500/30 shrink-0 mt-0.5">
-                    <i class="fa-solid fa-laptop-file"></i>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center text-base border border-blue-500/30 shrink-0 mt-0.5">
+                      <i class="fa-solid fa-laptop-file"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-black text-white tracking-tight leading-snug">
+                        체계적인 교육 시스템과 다양한 영업활동 자료 제공
+                      </h4>
+                      <p class="text-[11px] sm:text-xs text-cyan-300 mt-1 font-bold flex items-center gap-1">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span>PC와 모바일로 상시 접속 가능</span>
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-xs sm:text-sm font-black text-white tracking-tight leading-snug">
-                      체계적인 교육 시스템과 다양한 영업활동 자료 제공
-                    </h4>
-                    <p class="text-[11px] sm:text-xs text-cyan-300 mt-1 font-bold flex items-center gap-1">
-                      <i class="fa-solid fa-mobile-screen"></i>
-                      <span>PC와 모바일로 상시 접속 가능</span>
-                    </p>
-                  </div>
+                  <button onclick="goToProofTab('tab-edu')" class="shrink-0 bg-blue-500/10 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition flex items-center gap-1 mt-0.5">
+                    <span>자료 확인하기</span>
+                    <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                  </button>
                 </div>
               </div>
 
-              <!-- 카드 2 -->
+              <!-- 카드 2: 영업 Tool -->
               <div class="bg-slate-950/80 p-3 sm:p-3.5 rounded-xl border border-slate-800/90 hover:border-emerald-500/50 transition">
-                <div class="flex items-start gap-3">
-                  <div class="w-9 h-9 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-base border border-emerald-500/30 shrink-0 mt-0.5">
-                    <i class="fa-solid fa-toolbox"></i>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-base border border-emerald-500/30 shrink-0 mt-0.5">
+                      <i class="fa-solid fa-toolbox"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-black text-white tracking-tight leading-snug">
+                        다양한 영업활동 Tool 제공
+                      </h4>
+                      <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 font-medium">
+                        다이렉트 자동차영업 · 온라인DB 영업 · 헬스케어 영업
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-xs sm:text-sm font-black text-white tracking-tight leading-snug">
-                      다양한 영업활동 Tool 제공
-                    </h4>
-                    <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 font-medium">
-                      다이렉트 자동차영업 · 온라인DB 영업 · 헬스케어 영업
-                    </p>
-                  </div>
+                  <button onclick="goToProofTab('tab-tool')" class="shrink-0 bg-emerald-500/10 hover:bg-emerald-600 text-emerald-400 hover:text-white border border-emerald-500/30 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition flex items-center gap-1 mt-0.5">
+                    <span>자료 확인하기</span>
+                    <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                  </button>
                 </div>
               </div>
 
-              <!-- 카드 3 -->
+              <!-- 카드 3: DB 시스템 -->
               <div class="bg-slate-950/80 p-3 sm:p-3.5 rounded-xl border border-slate-800/90 hover:border-purple-500/50 transition">
-                <div class="flex items-start gap-3">
-                  <div class="w-9 h-9 rounded-lg bg-purple-500/15 text-purple-400 flex items-center justify-center text-base border border-purple-500/30 shrink-0 mt-0.5">
-                    <i class="fa-solid fa-headset"></i>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-purple-500/15 text-purple-400 flex items-center justify-center text-base border border-purple-500/30 shrink-0 mt-0.5">
+                      <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-black text-white tracking-tight leading-snug">
+                        DB영업을 위한 DB시스템 및 교육 인프라 구축
+                      </h4>
+                      <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 font-medium leading-tight">
+                        • 자체DB 생산 시스템 및 글로벌제휴 DB 공급<br>
+                        • DB영업 전문가의 Call 교육 및 코칭
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-xs sm:text-sm font-black text-white tracking-tight leading-snug">
-                      DB영업을 위한 DB시스템 및 교육 인프라 구축
-                    </h4>
-                    <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 font-medium leading-tight">
-                      • 자체DB 생산 시스템 및 글로벌제휴 DB 공급<br>
-                      • DB영업 전문가의 Call 교육 및 코칭
-                    </p>
-                  </div>
+                  <button onclick="goToProofTab('tab-db')" class="shrink-0 bg-purple-500/10 hover:bg-purple-600 text-purple-400 hover:text-white border border-purple-500/30 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition flex items-center gap-1 mt-0.5">
+                    <span>자료 확인하기</span>
+                    <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                  </button>
                 </div>
               </div>
 
-              <!-- 카드 4 -->
+              <!-- 카드 4: 세미나 -->
               <div class="bg-slate-950/80 p-3 sm:p-3.5 rounded-xl border border-slate-800/90 hover:border-amber-500/50 transition">
-                <div class="flex items-start gap-3">
-                  <div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center text-base border border-amber-500/30 shrink-0 mt-0.5">
-                    <i class="fa-solid fa-chalkboard-user"></i>
+                <div class="flex items-start justify-between gap-2">
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center text-base border border-amber-500/30 shrink-0 mt-0.5">
+                      <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-black text-white tracking-tight leading-snug">
+                        매월 외부 교육 세미나 운영
+                      </h4>
+                      <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 font-medium">
+                        세일즈스킬 및 보상, 질병 등 전문 심화 교육
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 class="text-xs sm:text-sm font-black text-white tracking-tight leading-snug">
-                      매월 외부 교육 세미나 운영
-                    </h4>
-                    <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 font-medium">
-                      세일즈스킬 및 보상, 질병 등 전문 심화 교육
-                    </p>
-                  </div>
+                  <button onclick="goToProofTab('tab-seminar')" class="shrink-0 bg-amber-500/10 hover:bg-amber-600 text-amber-400 hover:text-white border border-amber-500/30 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition flex items-center gap-1 mt-0.5">
+                    <span>자료 확인하기</span>
+                    <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                  </button>
                 </div>
               </div>
 
@@ -225,6 +252,10 @@
                 <div class="text-xs sm:text-sm font-black text-white mt-0.5">
                   34개 손생보회사
                 </div>
+                <button onclick="goToProofTab('tab-partner')" class="mt-1.5 bg-slate-900 hover:bg-cyan-600 text-cyan-400 hover:text-white border border-cyan-500/30 text-[10px] font-bold px-2 py-0.5 rounded transition inline-flex items-center gap-1">
+                  <span>자료 확인하기</span>
+                  <i class="fa-solid fa-arrow-down text-[9px]"></i>
+                </button>
               </div>
 
               <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 flex flex-col justify-center items-center">
@@ -284,7 +315,6 @@
           </p>
         </div>
 
-        <!-- 하단 박스형 아이템 -->
         <div class="mt-8 pt-6 border-t border-slate-800/80 space-y-2.5">
           <div class="bg-blue-950/40 border border-blue-500/40 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 hover:border-blue-400 transition">
             <i class="fa-solid fa-route text-blue-400 text-base shrink-0 mt-0.5"></i>
@@ -323,7 +353,6 @@
 
       <!-- 강점 2: 원수사 TC 실전 노하우 전수 -->
       <div class="bg-gradient-to-b from-blue-950/40 via-slate-900 to-slate-900 p-6 sm:p-7 rounded-3xl border-2 border-cyan-400 relative flex flex-col justify-between shadow-2xl shadow-cyan-500/20">
-        
         <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs sm:text-sm font-black px-4 py-1 rounded-full shadow-lg whitespace-nowrap">
           ★ 전원 TC 출신의 실전 노하우
         </div>
@@ -347,7 +376,6 @@
           </p>
         </div>
 
-        <!-- 하단 박스형 아이템 -->
         <div class="mt-8 pt-6 border-t border-slate-800/80 space-y-2.5">
           <div class="bg-cyan-950/40 border border-cyan-500/40 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 hover:border-cyan-400 transition">
             <i class="fa-solid fa-file-lines text-cyan-400 text-base shrink-0 mt-0.5"></i>
@@ -384,7 +412,7 @@
         </div>
       </div>
 
-      <!-- 강점 3: 다양한 영업툴 & DB 직접 생산 교육 -->
+      <!-- 강점 3: 영업툴 & DB 생산 -->
       <div class="bg-slate-900/90 p-6 sm:p-7 rounded-3xl border border-slate-800/90 hover:border-purple-500/50 transition-all flex flex-col justify-between shadow-2xl backdrop-blur-md">
         <div>
           <div class="flex items-center justify-between mb-5">
@@ -405,7 +433,6 @@
           </p>
         </div>
 
-        <!-- 하단 박스형 아이템 -->
         <div class="mt-8 pt-6 border-t border-slate-800/80 space-y-2.5">
           <div class="bg-purple-950/40 border border-purple-500/40 p-3 sm:p-3.5 rounded-xl flex items-start gap-3 hover:border-purple-400 transition">
             <i class="fa-solid fa-bullseye text-purple-400 text-base shrink-0 mt-0.5"></i>
@@ -440,6 +467,184 @@
             </div>
           </div>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= [하단 별도 실물 증거자료 확인 UI] ================= -->
+  <section id="proof-gallery" class="py-16 px-4 max-w-6xl mx-auto border-t border-slate-800/80">
+    <div class="bg-slate-900/90 border-2 border-slate-800 rounded-3xl p-6 sm:p-9 shadow-2xl backdrop-blur-xl">
+      
+      <div class="text-center mb-10">
+        <span class="inline-block bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
+          INFRASTRUCTURE PROOF
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-black text-white mt-3 leading-snug">
+          말뿐이 아닌 <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-300">새길지사 인프라 실물 자료</span>
+        </h3>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2 max-w-xl mx-auto">
+          상단 카드의 <strong>[자료 확인하기]</strong>를 누르시거나, 아래 탭을 선택하여 실제 지원 인프라를 직접 확인하세요.
+        </p>
+      </div>
+
+      <!-- 5개 탭 네비게이션 바 -->
+      <div class="flex gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar border-b border-slate-800">
+        <button onclick="switchProofTab('tab-edu')" id="btn-tab-edu" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-blue-600 text-white shadow-lg shadow-blue-600/30">
+          <i class="fa-solid fa-laptop-file"></i> 1. 교육 시스템
+        </button>
+        <button onclick="switchProofTab('tab-tool')" id="btn-tab-tool" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
+          <i class="fa-solid fa-toolbox"></i> 2. 영업 Tool
+        </button>
+        <button onclick="switchProofTab('tab-db')" id="btn-tab-db" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
+          <i class="fa-solid fa-headset"></i> 3. DB 시스템 & 코칭
+        </button>
+        <button onclick="switchProofTab('tab-seminar')" id="btn-tab-seminar" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
+          <i class="fa-solid fa-chalkboard-user"></i> 4. 매월 세미나
+        </button>
+        <button onclick="switchProofTab('tab-partner')" id="btn-tab-partner" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
+          <i class="fa-solid fa-building-shield"></i> 5. 34개 제휴사
+        </button>
+      </div>
+
+      <!-- [패널 1] 교육 시스템 (edu_1.png, edu_2.png) -->
+      <div id="tab-edu" class="tab-panel space-y-4">
+        <div class="bg-blue-950/30 border border-blue-500/30 p-3.5 rounded-xl text-xs sm:text-sm text-blue-200 flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-blue-400"></i>
+          <span>글로벌금융판매 본사 전산(GOMS)과 연동된 모바일/PC 스마트 교육 솔루션 '터치클래스' 실물</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-blue-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="edu_1.png" alt="터치클래스 접속 및 교육 시스템" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>PC · 모바일 상시 연동 교육 시스템</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-blue-400 text-[11px]"></i>
+            </p>
+          </div>
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-blue-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="edu_2.png" alt="상품자료 고객자료 영상 통합 앱" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>상품자료 · 고객터치자료 · 교육영상 앱</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-blue-400 text-[11px]"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- [패널 2] 영업 Tool (tool_1.png, tool_2.png, tool_3.png) -->
+      <div id="tab-tool" class="tab-panel hidden space-y-4">
+        <div class="bg-emerald-950/30 border border-emerald-500/30 p-3.5 rounded-xl text-xs sm:text-sm text-emerald-200 flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-emerald-400"></i>
+          <span>실제 집행 중인 SNS 타깃 광고 소재 및 자체 다이렉트 비교견적 시스템, 오프라인 제휴용 QR 배너</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-emerald-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="tool_1.png" alt="SNS 타깃 광고 집행 실물" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>인스타 · 페이스북 실전 타깃 광고</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-emerald-400 text-[11px]"></i>
+            </p>
+          </div>
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-emerald-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="tool_2.png" alt="차집사 자동차보험 비교 시스템" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>‘차집사’ 다이렉트 비교견적 솔루션</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-emerald-400 text-[11px]"></i>
+            </p>
+          </div>
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-emerald-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="tool_3.png" alt="차집사 딜러 제휴용 QR 배너" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>딜러 제휴 & 현장용 ‘차집사 QR 배너’</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-emerald-400 text-[11px]"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- [패널 3] DB 인프라 & 스크립트 (db_1.png, db_2.png, db_3.png) -->
+      <div id="tab-db" class="tab-panel hidden space-y-4">
+        <div class="bg-purple-950/30 border border-purple-500/30 p-3.5 rounded-xl text-xs sm:text-sm text-purple-200 flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-purple-400"></i>
+          <span>새길지사 관심사별 자체 기획 맞춤 DB, 본사 공식 제휴 DB 라인업 및 신인도 즉시 쓰는 실전 콜 스크립트</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-purple-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="db_1.png" alt="새길지사 맞춤 DB 시스템" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>새길지사 관심사별 맞춤 기획 DB</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-purple-400 text-[11px]"></i>
+            </p>
+          </div>
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-purple-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="db_2.png" alt="글로벌금융판매 제휴 DB 라인업" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>글로벌금융판매 공식 제휴 DB 라인업</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-purple-400 text-[11px]"></i>
+            </p>
+          </div>
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-purple-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="db_3.png" alt="실전 TM 콜 스크립트 화법집" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>신인도 계약 체결! 실전 콜 화법집</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-purple-400 text-[11px]"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- [패널 4] 매월 외부 세미나 (seminar.png) -->
+      <div id="tab-seminar" class="tab-panel hidden space-y-4">
+        <div class="bg-amber-950/30 border border-amber-500/30 p-3.5 rounded-xl text-xs sm:text-sm text-amber-200 flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-amber-400"></i>
+          <span>매주 수요일 본사 전문 강사진 초빙 실전 세일즈 및 질병·보상 전문 심화 라이브 세미나</span>
+        </div>
+        <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-amber-500 transition max-w-2xl mx-auto" onclick="openLightboxFromParent(this)">
+          <div class="overflow-hidden rounded-xl bg-black">
+            <img src="seminar.png" alt="G-Theme 정기 세미나 강사진 및 일정" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+            <span>10월 G-Theme 라이브 세미나 강사진 & 테마별 일정표</span>
+            <i class="fa-solid fa-magnifying-glass-plus text-amber-400 text-[11px]"></i>
+          </p>
+        </div>
+      </div>
+
+      <!-- [패널 5] 34개 제휴사 (partners_34.png) -->
+      <div id="tab-partner" class="tab-panel hidden space-y-4">
+        <div class="bg-cyan-950/30 border border-cyan-500/30 p-3.5 rounded-xl text-xs sm:text-sm text-cyan-200 flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-cyan-400"></i>
+          <span>생명보험 21개사, 손해보험 13개사 등 국내 주요 34개 보험사 원스톱 비교판매 제휴 라인업</span>
+        </div>
+        <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-cyan-500 transition max-w-2xl mx-auto" onclick="openLightboxFromParent(this)">
+          <div class="overflow-hidden rounded-xl bg-black">
+            <img src="partners_34.png" alt="34개 생명 손해보험 제휴사" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+            <span>생명보험 21개사 · 손해보험 13개사 제휴 현황</span>
+            <i class="fa-solid fa-magnifying-glass-plus text-cyan-400 text-[11px]"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center text-[11px] text-slate-500 mt-6">
+        <i class="fa-solid fa-hand-pointer mr-1"></i> 이미지를 클릭하시면 큰 화면(고해상도)으로 자세히 보실 수 있습니다.
       </div>
 
     </div>
@@ -568,8 +773,69 @@
     </div>
   </footer>
 
-  <!-- 구글 시트 실시간 전송 스크립트 -->
+  <!-- 이미지 확대 라이트박스 팝업 -->
+  <div id="imageLightbox" class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
+    <button type="button" class="absolute top-5 right-6 text-white text-3xl font-bold hover:text-slate-300 transition" onclick="closeLightbox()">&times;</button>
+    <img id="lightboxImg" src="" alt="확대 이미지" class="max-w-[95%] max-h-[90vh] rounded-xl shadow-2xl object-contain">
+  </div>
+
+  <!-- 스크립트 영역 -->
   <script>
+    // 1. 상단 인프라 카드 '자료 확인하기' 클릭 시 -> 하단 갤러리 해당 탭 이동 및 활성화
+    function goToProofTab(tabId) {
+      switchProofTab(tabId);
+      const gallery = document.getElementById('proof-gallery');
+      if (gallery) {
+        gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // 2. 하단 갤러리 탭 전환 로직
+    function switchProofTab(tabId) {
+      document.querySelectorAll('.tab-panel').forEach(function(panel) {
+        panel.classList.add('hidden');
+      });
+
+      const activePanel = document.getElementById(tabId);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+      }
+
+      document.querySelectorAll('.tab-btn').forEach(function(btn) {
+        btn.classList.remove('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/30');
+        btn.classList.add('bg-slate-800', 'text-slate-400');
+      });
+
+      const activeBtn = document.getElementById('btn-' + tabId);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-slate-800', 'text-slate-400');
+        activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/30');
+      }
+    }
+
+    // 3. 라이트박스 열기
+    function openLightboxFromParent(container) {
+      const img = container.querySelector('img');
+      if (img) {
+        openLightbox(img.src);
+      }
+    }
+
+    function openLightbox(src) {
+      const modal = document.getElementById('imageLightbox');
+      const modalImg = document.getElementById('lightboxImg');
+      modalImg.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('imageLightbox');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    // 4. 구글 시트 실시간 전송 스크립트
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxPlgSIqb7EFpEDWCIlAH1Y806nGh-FaWvIyQwQFgcTiR-anQmZMYXGS0aQXJIo9-YJ/exec";
 
     document.getElementById("leadForm").addEventListener("submit", function(e) {
