@@ -208,8 +208,8 @@
                         DB영업을 위한 DB시스템 및 교육 인프라 구축
                       </h4>
                       <p class="text-[11px] sm:text-xs text-slate-300 mt-0.5 font-medium leading-tight">
-                        • 자체DB 생산 시스템 및 글로벌제휴 DB 공급<br>
-                        • DB영업 전문가의 Call 교육 및 코칭
+- 자체DB 생산 시스템 및 글로벌제휴 DB 공급<br>
+- DB영업 전문가의 Call 교육 및 코칭
                       </p>
                     </div>
                   </div>
@@ -488,22 +488,25 @@
         </p>
       </div>
 
-      <!-- 5개 탭 네비게이션 바 -->
+      <!-- 6개 탭 네비게이션 바 -->
       <div class="flex gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar border-b border-slate-800">
-        <button onclick="switchProofTab('tab-edu')" id="btn-tab-edu" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-blue-600 text-white shadow-lg shadow-blue-600/30">
+        <button onclick="switchProofTab('tab-edu')" id="btn-tab-edu" class="tab-btn px-3.5 sm:px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-blue-600 text-white shadow-lg shadow-blue-600/30">
           <i class="fa-solid fa-laptop-file"></i> 1. 교육 시스템
         </button>
-        <button onclick="switchProofTab('tab-tool')" id="btn-tab-tool" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
+        <button onclick="switchProofTab('tab-tool')" id="btn-tab-tool" class="tab-btn px-3.5 sm:px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
           <i class="fa-solid fa-toolbox"></i> 2. 영업 Tool
         </button>
-        <button onclick="switchProofTab('tab-db')" id="btn-tab-db" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
+        <button onclick="switchProofTab('tab-db')" id="btn-tab-db" class="tab-btn px-3.5 sm:px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
           <i class="fa-solid fa-headset"></i> 3. DB 시스템 & 코칭
         </button>
-        <button onclick="switchProofTab('tab-seminar')" id="btn-tab-seminar" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
+        <button onclick="switchProofTab('tab-seminar')" id="btn-tab-seminar" class="tab-btn px-3.5 sm:px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
           <i class="fa-solid fa-chalkboard-user"></i> 4. 매월 세미나
         </button>
-        <button onclick="switchProofTab('tab-partner')" id="btn-tab-partner" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
+        <button onclick="switchProofTab('tab-partner')" id="btn-tab-partner" class="tab-btn px-3.5 sm:px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
           <i class="fa-solid fa-building-shield"></i> 5. 34개 제휴사
+        </button>
+        <button onclick="switchProofTab('tab-rookie')" id="btn-tab-rookie" class="tab-btn px-3.5 sm:px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white">
+          <i class="fa-solid fa-seedling"></i> 6. 신인교육시스템
         </button>
       </div>
 
@@ -640,6 +643,34 @@
             <span>생명보험 21개사 · 손해보험 13개사 제휴 현황</span>
             <i class="fa-solid fa-magnifying-glass-plus text-cyan-400 text-[11px]"></i>
           </p>
+        </div>
+      </div>
+
+      <!-- [패널 6] 신인교육시스템 (rookie_1.png, rookie_2.png) -->
+      <div id="tab-rookie" class="tab-panel hidden space-y-4">
+        <div class="bg-indigo-950/30 border border-indigo-500/30 p-3.5 rounded-xl text-xs sm:text-sm text-indigo-200 flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-indigo-400"></i>
+          <span>초보 신인도 첫 달부터 즉시 실적을 내는 새길지사만의 30일 완성 단계별 신인 육성 커리큘럼</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-indigo-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="rookie_1.png" onerror="handleImageFallback(this)" alt="신인 30일 완성 단계별 교육 로드맵" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>신인 30일 완성 단계별 교육 로드맵</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-indigo-400 text-[11px]"></i>
+            </p>
+          </div>
+          <div class="group cursor-pointer bg-slate-950 rounded-2xl p-2.5 border border-slate-800 hover:border-indigo-500 transition" onclick="openLightboxFromParent(this)">
+            <div class="overflow-hidden rounded-xl bg-black">
+              <img src="rookie_2.png" onerror="handleImageFallback(this)" alt="1:1 밀착 코칭 및 조기 정착 커리큘럼" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+            </div>
+            <p class="text-center text-xs font-bold text-slate-300 mt-2.5 flex items-center justify-center gap-1.5">
+              <span>1:1 밀착 코칭 및 조기 정착 커리큘럼</span>
+              <i class="fa-solid fa-magnifying-glass-plus text-indigo-400 text-[11px]"></i>
+            </p>
+          </div>
         </div>
       </div>
 
